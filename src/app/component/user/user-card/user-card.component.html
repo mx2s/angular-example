@@ -1,6 +1,11 @@
 <mat-card>
-  <p>id: {{user.id}}</p>
-  <p>Name: {{user.name}} {{user.surname}}</p>
-  <p>Email: {{user.email}}</p>
-  <button mat-raised-button color="warn">Delete</button>
+  <p><b>id:</b> {{user.id}}</p>
+  <p><b>Name:</b> {{user.name}} {{user.surname}}</p>
+  <p><b>Email:</b> {{user.email}}</p>
+  <div class="text-center" *ngIf="!isDeleted">
+    <button (click)="deleteUser()" mat-raised-button color="warn">Delete</button>
+  </div>
+  <div class="text-red text-center" *ngIf="isDeleted">
+    <p>User was deleted</p>
+  </div>
 </mat-card>

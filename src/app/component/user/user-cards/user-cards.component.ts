@@ -1,5 +1,6 @@
 import {Component, HostBinding, Input, OnInit} from '@angular/core';
 import {User} from "../../../model/user/user";
+import axios from "axios";
 
 @Component({
   selector: 'app-user-cards',
@@ -14,17 +15,10 @@ export class UserCardsComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-    let newUser : User = {
-      id: "1",
-      name: "John",
-      surname: "Doe",
-      email: "johndoe@microsoft.com"
-    };
-    this.users.push(newUser);
-    this.users.push(newUser);
-    this.users.push(newUser);
-    this.users.push(newUser);
-    this.users.push(newUser);
+  async ngOnInit() {
+    axios.get('http://localhost:8000/api/v1/users')
+      .then((response) => {
+        this.users = response.data.data.users;
+      });
   }
 }
