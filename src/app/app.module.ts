@@ -6,21 +6,25 @@ import { AppRoutingModule } from './app-routing.module';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import { AppComponent } from './app.component';
-import { TempComponent } from './temp/temp.component';
+import { UserCardComponent } from "./user/user-card/user-card.component";
+import { UserCardsComponent } from './user/user-cards/user-cards.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TempComponent
+    UserCardComponent,
+    UserCardsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatCardModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
