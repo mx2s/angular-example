@@ -1,5 +1,5 @@
 import {Component, HostBinding, Input, OnInit} from '@angular/core';
-import {User} from "../../model/user/user";
+import {User} from "../../../model/user/user";
 
 @Component({
   selector: 'app-user-cards',
