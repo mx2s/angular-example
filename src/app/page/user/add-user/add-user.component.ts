@@ -28,6 +28,8 @@ export class AddUserComponent implements OnInit {
     Validators.email,
   ]);
 
+  matcher: any;
+
   formData: object;
 
   constructor(notifierService: NotifierService) {

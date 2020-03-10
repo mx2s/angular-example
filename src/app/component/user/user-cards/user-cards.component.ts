@@ -41,7 +41,6 @@ export class UserCardsComponent implements OnInit {
   }
 
   performSearch(e) {
-    console.log(e.target);
     this.users = this.filterUsers(this.allUsers, e.target.value);
   }
 
